@@ -1,4 +1,4 @@
-# OAuth Drills
-## Version 1
+# Spotify OAuth Drill
+## (Version 1 of the OAuth drills)
 
 ### In progress

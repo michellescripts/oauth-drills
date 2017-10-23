@@ -6,6 +6,7 @@ const querystring = require('querystring')
 require('dotenv').config()
 
 app.use(express.static('public'))
+app.set('view engine', 'hbs')
 
 app.get('/', (req, res, next) => {
   res.render('index')

@@ -35,14 +35,17 @@ app.get('/redirect', (req, res, next) => {
     },
     headers: {Authorization: 'Basic ' + base64}
   }
-  console.log('got auth code, getting token')
   request(options, (error, response, body) => {
-    console.log(response.statusCode)
     if (!error && response.statusCode === 200) {
       console.log(body)
+      // body is token, how do we store this?
     }
   })
-  res.send('redirect success')
+  res.render('success')
+})
+
+app.get('/me', (res, req, next) => {
+  // write get req here
 })
 
 app.listen(port, () => {
